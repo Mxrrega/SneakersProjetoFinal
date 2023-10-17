@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//TESTE COMMIT 01
+//TESTE COMMIT 01 TESTE 02
 
 var app = builder.Build();
 
