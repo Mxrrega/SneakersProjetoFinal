@@ -5,16 +5,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-/*builder.Services.AddDbContext<Contexto> MARREGA
+/*builder.Services.AddDbContext<Contexto> //MARREGA
     (options => options.UseSqlServer("Data Source=SP-1491038\\SQLSENAI;Initial Catalog = SneakersProjetoFinal;Integrated Security = True;TrustServerCertificate = true"));*/
 
-/*builder.Services.AddDbContext<Contexto> PAULO
+/*builder.Services.AddDbContext<Contexto> //PAULO
     (options => options.UseSqlServer("Data Source=SP-1491005\\SQLSENAI;Initial Catalog = SneakersProjetoFinal;Integrated Security = True;TrustServerCertificate = true"));*/
 
-/*builder.Services.AddDbContext<Contexto> VITOR
+/*builder.Services.AddDbContext<Contexto> //VITOR
     (options => options.UseSqlServer("Data Source=SP-1491026\\SQLSENAI;Initial Catalog = SneakersProjetoFinal;Integrated Security = True;TrustServerCertificate = true"));*/
 
-/*builder.Services.AddDbContext<Contexto> MENDES
+/*builder.Services.AddDbContext<Contexto> //MENDES
     (options => options.UseSqlServer("Data Source=SP-1491036\\SQLSENAI;Initial Catalog = SneakersProjetoFinal;Integrated Security = True;TrustServerCertificate = true"));*/
 
 var app = builder.Build();
