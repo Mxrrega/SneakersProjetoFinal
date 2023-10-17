@@ -1,8 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//TESTE COMMIT 01 TESTE 02
+
+/*builder.Services.AddDbContext<Contexto>
+    (options => options.UseSqlServer("Data Source=SP-1491038\\SQLSENAI;Initial Catalog = SneakersProj;Integrated Security = True;TrustServerCertificate = true"));*/
 
 var app = builder.Build();
 
