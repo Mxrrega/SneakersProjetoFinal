@@ -3,10 +3,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-
-<h1>Create</h1>
-
-<h4>Cadastro</h4>
+<h4>Cadastre-se</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -31,16 +28,13 @@
                 <label asp-for="Senha" class="control-label"></label>
                 <input asp-for="Senha" class="form-control" />
                 <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
+            </div><br>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a asp-action="Index">Voltar</a>
+            </div><br>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

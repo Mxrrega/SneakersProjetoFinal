@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SneakersProjetoFinal.Models;
 
 namespace SneakersProjetoFinal.Models
 {
@@ -8,10 +9,8 @@ namespace SneakersProjetoFinal.Models
         {
 
         }
-
         public DbSet<Categoria>? Categoria { get; set; }
         public DbSet<CadastroProduto> CadastroProduto { get; set; }
         public DbSet<Cadastro> Cadastro { get; set; }
-
     }
 }
