@@ -23,3 +23,156 @@ main {
 .container-1 {
     width: 100%;
 }
+.logo {
+    width: 20%;
+    color: #ffffff;
+    font-family: "Roboto", Helvetica;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.14px;
+    line-height: 36px;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+}
+.button-logo {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    max-width: 1920px;
+    padding: 14.3px 0px 11.31px;
+    width: 147px;
+    cursor: pointer;
+}
+.header {
+    display: inline-flex;
+    width: 100%;
+    background-color: #000000;
+}
+.div-opcoes {
+    width: 50%;
+    display: inline-flex;
+}
+.caixa-nav-opções {
+    height: 36px;
+    width: 80%;
+    display: inline-flex;
+}
+.navbar-nav-1 {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 10px 0px 11px;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-decoration: none; 
+    color: #ffffff; 
+    font-weight: bold; 
+}
+
+
+
+.barra-de-ferramentas {
+    width: 50%;
+    display: inline-flex;
+    justify-content: end;
+}
+
+.div-barra-de-pesquisa {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 258px;
+    padding: 14.3px 0px;
+}
+
+.div-pesquisa {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: inline-flex;
+    height: 36px;
+}
+
+.input-nome {
+    all: unset;
+    color: #757575;
+    font-family: "Roboto", Helvetica;
+    padding: 0px 10px;
+}
+
+.opcoes-header {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.simoblo-lupa {
+    all: unset;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    justify-content: center;
+    max-width: 250px;
+    overflow: hidden;
+    padding: 8px 0px 8px 20.2px;
+    position: relative;
+    width: 40px;
+    z-index: 1;
+}
+.symbol {
+    color: #ffffffde;
+    font-family: "Material Icons", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.options-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.options-box button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.opcoes-header:hover .options-box {
+    display: block;
+}

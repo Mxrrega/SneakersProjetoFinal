@@ -3,33 +3,57 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SneakersProjetoFinal</title>
+    <title>@ViewData["Title"] - SNEAKERS</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SneakersProjetoFinal.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/c675666b72.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SneakersProjetoFinal</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+        <nav class="header">
+            <div class="div-opcoes">
+                <div class="logo">
+                    <button class="button-logo" asp-area="" asp-controller="Home" asp-action="Index">SNEAKERS</button>
+                </div>
+                
+                <div class="caixa-nav-opções">
+                    <ul class="navbar-nav-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro" asp-action="index">Cadastro</a>
+                            <a class="nav-link" asp-area="" asp-controller="Cadastro" asp-action="index">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CadastroProduto" asp-action="Index">Cadastro de Produto</a>
+                            <a class="nav-link" asp-area="" asp-controller="CadastroProduto" asp-action="Index">Cadastro de Produto</a>
                         </li>
+                    
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categoria" asp-action="Index">Cadastro de Categoria</a>
+                            <a class="nav-link" asp-area="" asp-controller="Categoria" asp-action="Index">Cadastro de Categoria</a>
                         </li>
                     </ul>
+                    </div>
                 </div>
+
+           <div class="barra-de-ferramentas">
+              
+              
+              <div class="div-barra-de-pesquisa">
+                <div class="div-pesquisa">
+                  <button class="simoblo-lupa">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <div>
+                      <input type="text" placeholder="Produtos ou categoria" class="input-nome" />
+                  </div>
+                  
+                </div>
+                </div>
+                <div class="opcoes-header">
+                    <div class="symbol"><i class="fas fa-bars"></i></div>
+                        <div class="options-box">
+                            <button class="login-button">Login</button>
+                            <button class="signup-button">Cadastro</button>
+                        </div>
+                    </div>
             </div>
         </nav>
     </header>
