@@ -1,4 +1,5 @@
 ﻿body {
+    margin: 0;
 }
 #myCarousel {
     width: 100%;
@@ -13,3 +14,4 @@
     .carousel-indicators li.active {
         background-color: #FF5733; /* Cor de fundo inativa */
     }
+
