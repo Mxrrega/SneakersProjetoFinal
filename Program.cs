@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 /*builder.Services.AddDbContext<Contexto> //MARREGA
     (options => options.UseSqlServer("Data Source=SP-1491038\\SQLSENAI;Initial Catalog = SneakersProjetoFinal;Integrated Security = True;TrustServerCertificate = true"));*/
 
-/*builder.Services.AddDbContext<Contexto> //PAULO
+/*ilder.Services.AddDbContext<Contexto> //PAULO
     (options => options.UseSqlServer("Data Source=SP-1491005\\SQLSENAI;Initial Catalog = SneakersProjetoFinal;Integrated Security = True;TrustServerCertificate = true"));*/
 
 /*builder.Services.AddDbContext<Contexto> //VITOR
