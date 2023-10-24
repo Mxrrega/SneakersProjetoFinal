@@ -3,14 +3,13 @@
 @{
     ViewData["Title"] = "Delete";
 }
+<link rel="stylesheet" href="~/css/CSSCadastro.css" />
 
-<h1>Deletar</h1>
-
-<h5>
-    Tem certeza de que deseja excluir isto?
-</h5>
-<div>
-    <hr />
+<button class="button">
+    Excluir Cadastro
+</button>
+<hr />
+<div class="table1">
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.NomeCadastro)
@@ -40,7 +39,9 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Deletar" class="btn btn-danger" /> |
-        <a asp-action="Index">Voltar</a>
+        <input type="submit" value="Deletar" class="btn btn-danger" /> 
     </form>
+    <div>
+        <a asp-action="Index" class="voltardeletecadastro">Voltar</a>
+    </div>
 </div>

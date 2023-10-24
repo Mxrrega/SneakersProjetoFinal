@@ -3,11 +3,13 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link rel="stylesheet" href="~/css/CSSCadastro.css">
 
-<h1>Detalhes</h1>
-
-<div>
-    <hr />
+<button class="button">
+    Detalhes do Cadastro
+</button>
+<hr />
+<div class="table2">
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.NomeCadastro)
@@ -36,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="voltarcreatecadastro">Editar</a> |
+    <a asp-action="Index" class="voltarcreatecadastro">Voltar</a>
 </div>

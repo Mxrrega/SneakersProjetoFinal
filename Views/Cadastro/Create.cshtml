@@ -3,38 +3,43 @@
 @{
     ViewData["Title"] = "Create";
 }
-<h4>Cadastre-se</h4>
+<link rel="stylesheet" href="~/css/CSSCadastro.css">
+
+<button class="button">
+    Cadastre-se
+</button>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<table class="table">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="NomeCadastro" class="control-label"></label>
                 <input asp-for="NomeCadastro" class="form-control" />
                 <span asp-validation-for="NomeCadastro" class="text-danger"></span>
-            </div>
+        </div><br />
             <div class="form-group">
                 <label asp-for="EmailCadastro" class="control-label"></label>
                 <input asp-for="EmailCadastro" class="form-control" />
                 <span asp-validation-for="EmailCadastro" class="text-danger"></span>
-            </div>
+        </div><br />
             <div class="form-group">
                 <label asp-for="CPFCadastro" class="control-label"></label>
                 <input asp-for="CPFCadastro" class="form-control" />
                 <span asp-validation-for="CPFCadastro" class="text-danger"></span>
-            </div>
+        </div><br />
             <div class="form-group">
                 <label asp-for="Senha" class="control-label"></label>
                 <input asp-for="Senha" class="form-control" />
                 <span asp-validation-for="Senha" class="text-danger"></span>
-            </div><br>
-            <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
-                <a asp-action="Index">Voltar</a>
-            </div><br>
+        </div><br />
+            <button class="createproduto">
+                Cadastrar-se
+            </button>
         </form>
-    </div>
+</table>
+<br />
+<div>
+    <a asp-action="Index" class="voltarcreatecadastro">Voltar</a>
 </div>
 
 @section Scripts {

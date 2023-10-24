@@ -6,18 +6,16 @@
 .table {
     margin: 0 auto;
     background-color: white;
-    width: 700px;
     border-radius: 7px;
 }
 
 button {
-    border: none;
-    outline: none;
     background-color: #7d2ae8;
     color: #fff;
     padding: 10px 20px;
     font-size: 12px;
     border-radius: 6px;
+    border: white;
 }
 
 .button {
@@ -29,11 +27,53 @@ button {
     cursor: pointer;
     background-color: #7d2ae8;
 }
-.cadastrar {
+
+.form-group {
+    font-weight: bolder;
+}
+
+.form-control {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.createcadastro {
     border: 1px solid white;
     font-weight: bold;
 }
 
-.corcadastro {
+.voltarcreatecadastro {
     color: white;
 }
+
+.editcadastro {
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.voltareditcadastro {
+    color: white;
+}
+
+.voltardetailscadastro {
+    color: white;
+}
+
+.voltardeletecadastro {
+    color: white;
+}
+
+.table1 {
+    margin: 0 auto;
+}
+
+.row {
+    text-align: left;
+}
+
+.table2 {
+    margin: 0 auto;
+}
+
+
+

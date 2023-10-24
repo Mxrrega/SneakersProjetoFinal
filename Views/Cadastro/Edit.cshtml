@@ -3,15 +3,13 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<link rel="stylesheet" href="~/css/CSSCadastro.css">
 
-<h1>Editar</h1>
-
-<h5>
-    Tem certeza de que deseja editar isto?
-</h5>
+<button class="button">
+    Edite um Cadastro
+</button>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<table class="table">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
@@ -19,29 +17,32 @@
                 <label asp-for="NomeCadastro" class="control-label"></label>
                 <input asp-for="NomeCadastro" class="form-control" />
                 <span asp-validation-for="NomeCadastro" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
                 <label asp-for="EmailCadastro" class="control-label"></label>
                 <input asp-for="EmailCadastro" class="form-control" />
                 <span asp-validation-for="EmailCadastro" class="text-danger"></span>
-            </div>
+        </div><br />
             <div class="form-group">
                 <label asp-for="CPFCadastro" class="control-label"></label>
                 <input asp-for="CPFCadastro" class="form-control" />
                 <span asp-validation-for="CPFCadastro" class="text-danger"></span>
-            </div>
+        </div><br />
             <div class="form-group">
                 <label asp-for="Senha" class="control-label"></label>
                 <input asp-for="Senha" class="form-control" />
                 <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <div class="form-group"><br />
-                <input type="submit" value="Confirmar" class="btn btn-primary" />
-                <a asp-action="Index">Voltar</a>
-            </div>
+        </div><br />
+        <button class="editcadastro">
+            Confirmar Edição
+        </button>
         </form>
-    </div>
+</table>
+<br />
+<div>
+    <a asp-action="Index">Voltar</a>
 </div>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
