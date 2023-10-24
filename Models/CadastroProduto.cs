@@ -19,10 +19,8 @@ namespace SneakersProjetoFinal.Models
         [Display(Name = "Descrição do Produto")]
         public string DescricaoProduto { get; set; } = string.Empty;
 
-        [ForeignKey("Id_Categoria")]
-        [Display(Name = "Categoria")]
-        public int Id_Categoria { get; set; }
-
+        [ForeignKey("CategoriaId")]
+        public int CategoriaId { get; set; }
         public Categoria? Categoria { get; set; }
 
         [Column("ImagemProduto")]

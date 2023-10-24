@@ -6,9 +6,9 @@ namespace SneakersProjetoFinal.Models
     [Table("Categoria")]
     public class Categoria
     {
-        [Column("Id_Categoria")]
-        [Display(Name = "IdCategoria")]
-        public int Id { get; set; }
+        [Column("CategoriaId")]
+        [Display(Name = "CategoriaId")]
+        public int CategoriaId { get; set; }
 
         [Column("NomeCategoria")]
         [Display(Name = "Nome da Categoria")]

@@ -35,7 +35,7 @@ namespace SneakersProjetoFinal.Controllers
             }
 
             var categoria = await _context.Categoria
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.CategoriaId == id);
             if (categoria == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace SneakersProjetoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeCategoria")] Categoria categoria)
+        public async Task<IActionResult> Create([Bind("CategoriaId,NomeCategoria")] Categoria categoria)
         {
             if (ModelState.IsValid)
             {
@@ -87,9 +87,9 @@ namespace SneakersProjetoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeCategoria")] Categoria categoria)
+        public async Task<IActionResult> Edit(int id, [Bind("CategoriaId,NomeCategoria")] Categoria categoria)
         {
-            if (id != categoria.Id)
+            if (id != categoria.CategoriaId)
             {
                 return NotFound();
             }
@@ -103,7 +103,7 @@ namespace SneakersProjetoFinal.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoriaExists(categoria.Id))
+                    if (!CategoriaExists(categoria.CategoriaId))
                     {
                         return NotFound();
                     }
@@ -126,7 +126,7 @@ namespace SneakersProjetoFinal.Controllers
             }
 
             var categoria = await _context.Categoria
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.CategoriaId == id);
             if (categoria == null)
             {
                 return NotFound();
@@ -156,7 +156,7 @@ namespace SneakersProjetoFinal.Controllers
 
         private bool CategoriaExists(int id)
         {
-          return (_context.Categoria?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Categoria?.Any(e => e.CategoriaId == id)).GetValueOrDefault();
         }
     }
 }

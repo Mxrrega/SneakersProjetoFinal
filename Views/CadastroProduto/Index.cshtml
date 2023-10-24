@@ -3,13 +3,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-<link rel="stylesheet" href="~/css/CadastroProduto.css">
 
-<button class="button">
-    Produtos Cadastrados
-</button>
-<br><br>
+<h1>Index</h1>
 
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.DescricaoProduto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Id_Categoria)
+                @Html.DisplayNameFor(model => model.Categoria)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ImagemProduto)
@@ -38,23 +37,17 @@
                 @Html.DisplayFor(modelItem => item.DescricaoProduto)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Id_Categoria)
+                @Html.DisplayFor(modelItem => item.Categoria.NomeCategoria)
+            </td>
+            <td>               
+                <img src = "@Url.Content(item.ImagemProduto)" class="imagem-produto"/>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagemProduto)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-<div>
-    <button>
-        <a asp-action="Create">Criar novo</a>
-    </button>
-</div>
-

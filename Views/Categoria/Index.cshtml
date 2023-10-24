@@ -3,12 +3,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-<link rel="stylesheet" href="~/css/Cadastro.css">
 
-<button class="button">
-    Categorias
-</button>
-<br><br>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -25,17 +25,11 @@
                 @Html.DisplayFor(modelItem => item.NomeCategoria)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.CategoriaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CategoriaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CategoriaId">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-<div>
-    <button>
-        <a asp-action="Create">Criar Novo</a>
-    </button>
-</div>
-

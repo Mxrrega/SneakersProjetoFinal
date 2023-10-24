@@ -21,9 +21,8 @@ namespace SneakersProjetoFinal.Controllers
         // GET: CadastroProduto
         public async Task<IActionResult> Index()
         {
-              return _context.CadastroProduto != null ? 
-                          View(await _context.CadastroProduto.ToListAsync()) :
-                          Problem("Entity set 'Contexto.CadastroProduto'  is null.");
+            var contexto = _context.CadastroProduto.Include(c => c.Categoria);
+            return View(await contexto.ToListAsync());
         }
 
         // GET: CadastroProduto/Details/5
@@ -35,6 +34,7 @@ namespace SneakersProjetoFinal.Controllers
             }
 
             var cadastroProduto = await _context.CadastroProduto
+                .Include(c => c.Categoria)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (cadastroProduto == null)
             {
@@ -47,6 +47,7 @@ namespace SneakersProjetoFinal.Controllers
         // GET: CadastroProduto/Create
         public IActionResult Create()
         {
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "CategoriaId", "NomeCategoria");
             return View();
         }
 
@@ -55,7 +56,7 @@ namespace SneakersProjetoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeProduto,DescricaoProduto,Id_Categoria,ImagemProduto")] CadastroProduto cadastroProduto)
+        public async Task<IActionResult> Create([Bind("Id,NomeProduto,DescricaoProduto,CategoriaId,ImagemProduto")] CadastroProduto cadastroProduto)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +64,7 @@ namespace SneakersProjetoFinal.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "CategoriaId", "NomeCategoria", cadastroProduto.CategoriaId);
             return View(cadastroProduto);
         }
 
@@ -79,6 +81,7 @@ namespace SneakersProjetoFinal.Controllers
             {
                 return NotFound();
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "CategoriaId", "NomeCategoria", cadastroProduto.CategoriaId);
             return View(cadastroProduto);
         }
 
@@ -87,7 +90,7 @@ namespace SneakersProjetoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeProduto,DescricaoProduto,Id_Categoria,ImagemProduto")] CadastroProduto cadastroProduto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeProduto,DescricaoProduto,CategoriaId,ImagemProduto")] CadastroProduto cadastroProduto)
         {
             if (id != cadastroProduto.Id)
             {
@@ -114,6 +117,7 @@ namespace SneakersProjetoFinal.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "CategoriaId", "NomeCategoria", cadastroProduto.CategoriaId);
             return View(cadastroProduto);
         }
 
@@ -126,6 +130,7 @@ namespace SneakersProjetoFinal.Controllers
             }
 
             var cadastroProduto = await _context.CadastroProduto
+                .Include(c => c.Categoria)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (cadastroProduto == null)
             {

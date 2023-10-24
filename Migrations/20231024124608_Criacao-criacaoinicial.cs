@@ -5,7 +5,7 @@
 namespace SneakersProjetoFinal.Migrations
 {
     /// <inheritdoc />
-    public partial class CriacaoInicial : Migration
+    public partial class Criacaocriacaoinicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,13 +30,13 @@ namespace SneakersProjetoFinal.Migrations
                 name: "Categoria",
                 columns: table => new
                 {
-                    Id_Categoria = table.Column<int>(type: "int", nullable: false)
+                    CategoriaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NomeCategoria = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categoria", x => x.Id_Categoria);
+                    table.PrimaryKey("PK_Categoria", x => x.CategoriaId);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,8 +47,7 @@ namespace SneakersProjetoFinal.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NomeProduto = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DescricaoProduto = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Id_Categoria = table.Column<int>(type: "int", nullable: false),
-                    CategoriaId = table.Column<int>(type: "int", nullable: true),
+                    CategoriaId = table.Column<int>(type: "int", nullable: false),
                     ImagemProduto = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -58,7 +57,8 @@ namespace SneakersProjetoFinal.Migrations
                         name: "FK_CadastroProduto_Categoria_CategoriaId",
                         column: x => x.CategoriaId,
                         principalTable: "Categoria",
-                        principalColumn: "Id_Categoria");
+                        principalColumn: "CategoriaId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
