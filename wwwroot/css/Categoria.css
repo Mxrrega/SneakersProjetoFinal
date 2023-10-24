@@ -1,2 +1,30 @@
 ﻿body {
+    background-color: #808080;
+    text-align: center
+}
+
+.table {
+    margin-left: 610px;
+    background-color: white;
+    width: 700px;
+    border-radius: 7px;
+}
+button {
+    border: none;
+    outline: none;
+    background-color: #7d2ae8;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.button {
+    margin-top: 20px;
+    width: 300px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #7d2ae8;
 }

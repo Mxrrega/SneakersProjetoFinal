@@ -44,6 +44,10 @@ main {
     width: 147px;
     cursor: pointer;
 }
+.button-logo:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
 .header {
     display: inline-flex;
     width: 100%;
@@ -175,4 +179,7 @@ main {
 
 .opcoes-header:hover .options-box {
     display: block;
+}
+.border-top {
+    background-color: black;
 }
