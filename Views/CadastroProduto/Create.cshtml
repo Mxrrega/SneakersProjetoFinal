@@ -3,44 +3,42 @@
 @{
     ViewData["Title"] = "Create";
 }
-<link rel="stylesheet" href="~/css/CreateCadastroProduto.css">
+<link rel="stylesheet" href="~/css/CSSCadastroProduto.css">
 
 <button class="button">
     Cadastre um Produto
 </button>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<table class="table">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="NomeProduto" class="control-label"></label>
                 <input asp-for="NomeProduto" class="form-control" />
-                <span asp-validation-for="NomeProduto" class="text-danger"></span>
-            </div>
+            <span asp-validation-for="NomeProduto" class="text-danger"></span>
+        </div><br />
             <div class="form-group">
                 <label asp-for="DescricaoProduto" class="control-label"></label>
                 <input asp-for="DescricaoProduto" class="form-control" />
-                <span asp-validation-for="DescricaoProduto" class="text-danger"></span>
-            </div>
+            <span asp-validation-for="DescricaoProduto" class="text-danger"></span>
+        </div><br />
             <div class="form-group">
                 <label asp-for="CategoriaId" class="control-label"></label>
                 <select asp-for="CategoriaId" class ="form-control" asp-items="ViewBag.CategoriaId"></select>
-            </div>
+        </div><br />
             <div class="form-group">
                 <label asp-for="ImagemProduto" class="control-label"></label>
                 <input asp-for="ImagemProduto" class="form-control" />
-                <span asp-validation-for="ImagemProduto" class="text-danger"></span>
-            </div>
-            <button>
+            <span asp-validation-for="ImagemProduto" class="text-danger"></span>
+            </div><br />
+            <button class="createproduto">
                 Cadastrar Produto
             </button>
         </form>
-    </div>
-</div>
-
+</table>
+<br />
 <div>
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Index" class="voltarcreateproduto" >Voltar</a>
 </div>
 
 @section Scripts {

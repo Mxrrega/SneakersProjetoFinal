@@ -4,7 +4,7 @@
 }
 
 .table {
-    margin-left: 610px;
+    margin: 0 auto;
     background-color: white;
     width: 700px;
     border-radius: 7px;
