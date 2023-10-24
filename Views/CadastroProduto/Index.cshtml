@@ -8,8 +8,7 @@
 <button class="button">
     Produtos Cadastrados
 </button>
-<br>
-<br>
+<hr />
 <table class="table">
     <thead>
         <tr>
@@ -44,16 +43,17 @@
                 <img src = "@Url.Content(item.ImagemProduto)" class="imagem-produto"/>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
 <div>
-    <button>
-    <a asp-action="Create">Criar Produto</a>
-</button>
+    <button class="cadastrarproduto">
+        <a asp-action="Create" class="corcadastrar" > Cadastrar Produto </a>
+    </button>
 </div>
+

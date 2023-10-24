@@ -3,10 +3,11 @@
 @{
     ViewData["Title"] = "Create";
 }
+<link rel="stylesheet" href="~/css/CreateCadastroProduto.css">
 
-<h1>Create</h1>
-
-<h4>CadastroProduto</h4>
+<button class="button">
+    Cadastre um Produto
+</button>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -31,15 +32,15 @@
                 <input asp-for="ImagemProduto" class="form-control" />
                 <span asp-validation-for="ImagemProduto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+            <button>
+                Cadastrar Produto
+            </button>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {
