@@ -9,7 +9,8 @@
     Detalhes do Produto
 </button>
 <hr />
-<table class="table1 >
+<div class="table2" >
+    <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.NomeProduto)
         </dt>
@@ -34,8 +35,9 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ImagemProduto)
         </dd>
-</table>
+    </dl>
+</div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="voltardetailsproduto">Editar</a> |
-    <a asp-action="Index" class="voltardetailsproduto" >Voltar</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="voltarcreateproduto">Editar</a> |
+    <a asp-action="Index" class="voltarcreateproduto" >Voltar</a>
 </div>
