@@ -35,6 +35,7 @@ main {
     width: fit-content;
     text-decoration: none;
 }
+
 .button-logo {
     all: unset;
     display: flex;
@@ -44,24 +45,24 @@ main {
     width: 147px;
     cursor: pointer;
 }
-.button-logo:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
+
 .header {
     display: inline-flex;
     width: 100%;
     background-color: #000000;
 }
+
 .div-opcoes {
     width: 50%;
     display: inline-flex;
 }
+
 .caixa-nav-opções {
     height: 36px;
     width: 80%;
     display: inline-flex;
 }
+
 .navbar-nav-1 {
     width: 100%;
     flex-direction: row;
@@ -77,9 +78,9 @@ main {
 }
 
 .nav-link {
-    text-decoration: none; 
-    color: #ffffff; 
-    font-weight: bold; 
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 
@@ -121,6 +122,7 @@ main {
     justify-content: center;
     position: relative;
 }
+
 .simoblo-lupa {
     all: unset;
     align-items: center;
@@ -137,10 +139,10 @@ main {
     width: 40px;
     z-index: 1;
 }
+
 .symbol {
     color: #ffffffde;
     font-family: "Material Icons", Helvetica;
-    font-size: 24px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 24px;
@@ -149,12 +151,9 @@ main {
     text-align: center;
     white-space: nowrap;
     width: fit-content;
-}
-
-
-.symbol {
     font-size: 24px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .options-box {
@@ -162,10 +161,11 @@ main {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #fff;
+    background-color: #757575;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 5px;
+    z-index: 2;
 }
 
     .options-box button {
@@ -186,9 +186,8 @@ main {
 .opcoes-header:hover .options-box {
     display: block;
 }
-
-
-
-
+.border-top {
+    background-color: black;
+}
 
 
