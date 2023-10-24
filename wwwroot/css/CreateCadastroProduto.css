@@ -4,20 +4,18 @@
 }
 
 .table {
-    margin-left: 610px;
+    margin: 0 auto;
     background-color: white;
-    width: 700px;
     border-radius: 7px;
 }
 
 button {
-    border: none;
-    outline: none;
     background-color: #7d2ae8;
     color: #fff;
     padding: 10px 20px;
     font-size: 12px;
     border-radius: 6px;
+    border: white;
 }
 
 .button {
@@ -34,5 +32,17 @@ button {
     font-weight: bolder;
 }
 
+.form-control {
+    width: 300px;
+    margin: 0 auto;
+}
 
+.createproduto {
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.voltarcreateproduto {
+    color: white;
+}
 
