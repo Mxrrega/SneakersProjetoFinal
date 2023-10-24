@@ -46,3 +46,18 @@ button {
     color: white;
 }
 
+.editproduto {
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.voltareditproduto {
+    color: white;
+}
+
+.voltardetailsproduto {
+    color: white;
+}
+
+
+
