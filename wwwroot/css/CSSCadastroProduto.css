@@ -64,12 +64,15 @@ button {
 }
 
 .table1 {
-    width: 50%;
     margin: 0 auto;
 }
 
 .row {
     text-align: left;
+}
+
+.table2 {
+    margin: 0 auto;
 }
 
 
