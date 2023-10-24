@@ -28,3 +28,10 @@ button {
     cursor: pointer;
     background-color: #7d2ae8;
 }
+.cadastrarcategoria {
+    border: 1px solid white;
+    font-weight: bold;
+}
+.corcategoria {
+    color: white;
+}
