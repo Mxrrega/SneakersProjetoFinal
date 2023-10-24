@@ -29,3 +29,7 @@ button {
     cursor: pointer;
     background-color: #7d2ae8;
 }
+.imagem-produto {
+    width: 100px;
+    height: 100px;
+}

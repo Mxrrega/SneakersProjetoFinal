@@ -6,12 +6,12 @@
     height: 400px;
 }
 
-/* Personalize as cores dos indicadores do carrossel */
+
 .carousel-indicators li {
-    background-color: #007BFF; /* Cor de fundo ativa */
+    background-color: #007BFF; 
 }
 
     .carousel-indicators li.active {
-        background-color: #FF5733; /* Cor de fundo inativa */
+        background-color: #FF5733; 
     }
 

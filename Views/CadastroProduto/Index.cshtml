@@ -3,12 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" href="~/css/CadastroProduto.css">
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<button class="button">
+    Produtos Cadastrados
+</button>
+<br>
+<br>
 <table class="table">
     <thead>
         <tr>
@@ -51,3 +52,8 @@
 }
     </tbody>
 </table>
+<div>
+    <button>
+    <a asp-action="Create">Criar Produto</a>
+</button>
+</div>

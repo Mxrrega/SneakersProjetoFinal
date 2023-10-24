@@ -151,6 +151,12 @@ main {
     width: fit-content;
 }
 
+
+.symbol {
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .options-box {
     display: none;
     position: absolute;
@@ -162,24 +168,27 @@ main {
     border-radius: 5px;
 }
 
-.options-box button {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-top: 8px;
-    border: none;
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 3px;
-}
+    .options-box button {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin-top: 8px;
+        border: none;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
 
 .opcoes-header:hover .options-box {
     display: block;
 }
-.border-top {
-    background-color: black;
-}
+
+
+
+
+
+
