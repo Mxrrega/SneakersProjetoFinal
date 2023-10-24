@@ -189,5 +189,9 @@ main {
 .border-top {
     background-color: black;
 }
+.button-logo:hover {
+    color: white;
+    text-decoration: none;
+}
 
 
